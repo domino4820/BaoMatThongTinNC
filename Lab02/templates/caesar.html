@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Caesar Cipher</title>
+    <title>Cipher Tool</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,9 +12,11 @@
       <table class="table">
         <tr>
           <td style="text-align: center; font-weight: bold; font-size: 25px">
-            CAESAR CIPHER
+            CIPHER TOOL
           </td>
         </tr>
+
+        <!-- ENCRYPTION -->
         <tr>
           <td style="font-weight: bold; color: blue">ENCRYPTION</td>
         </tr>
@@ -35,17 +37,29 @@
               <div class="mb-3">
                 <label class="form-label">Key:</label>
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   name="inputKeyPlain"
                   placeholder="Input Key"
                   required
                 />
               </div>
+              <div class="mb-3">
+                <label class="form-label">Select Algorithm:</label>
+                <select class="form-control" name="cipherAlgorithm">
+                  <option value="caesar">Caesar</option>
+                  <option value="railfence">Rail Fence</option>
+                  <option value="playfair">Playfair</option>
+                  <option value="transposition">Transposition</option>
+                  <option value="vigenere">Vigenere</option>
+                </select>
+              </div>
               <button type="submit" class="btn btn-primary">Encrypt</button>
             </form>
           </td>
         </tr>
+
+        <!-- DECRYPTION -->
         <tr>
           <td style="font-weight: bold; color: blue">DECRYPTION</td>
         </tr>
@@ -65,12 +79,22 @@
               <div class="mb-3">
                 <label class="form-label">Key:</label>
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   name="inputKeyCipher"
                   placeholder="Input Key"
                   required
                 />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Select Algorithm:</label>
+                <select class="form-control" name="cipherAlgorithm">
+                  <option value="caesar">Caesar</option>
+                  <option value="railfence">Rail Fence</option>
+                  <option value="playfair">Playfair</option>
+                  <option value="transposition">Transposition</option>
+                  <option value="vigenere">Vigenere</option>
+                </select>
               </div>
               <button type="submit" class="btn btn-success">Decrypt</button>
             </form>
