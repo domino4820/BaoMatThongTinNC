@@ -12,7 +12,7 @@ def home():
 @app.route("/caesar")
 def caesar():
     return render_template('caesar.html')
-
+ 
 # Route mã hóa Caesar
 @app.route("/encrypt", methods=['POST'])
 def caesar_encrypt():
